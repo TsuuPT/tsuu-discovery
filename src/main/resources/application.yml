@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:8761}
+
+spring:
+  application:
+    name: tsuu-discovery
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      default-zone: ${EUREKA_URI:http://localhost:${server.port}/eureka}
+
+logging:
+  level:
+    net.sandrohc.tsuu: INFO
+#    com.netflix.eureka: OFF
+#    com.netflix.discovery: OFF
