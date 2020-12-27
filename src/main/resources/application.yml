@@ -10,7 +10,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      default-zone: ${EUREKA_URI:http://localhost:${server.port}/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:${server.port}/eureka}
 
 logging:
   level:
