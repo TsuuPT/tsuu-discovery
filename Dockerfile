@@ -7,4 +7,4 @@ FROM adoptopenjdk/openjdk15:alpine-jre
 WORKDIR /app
 COPY --from=BUILD /home/gradle/src/build/libs/*.jar ./tsuu-discovery.jar
 EXPOSE 12001
-CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-Dspring.profiles.active=docker", "-jar", "tsuu-discovery.jar"]
+CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "tsuu-discovery.jar"]
